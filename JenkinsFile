@@ -1,7 +1,7 @@
 pipeline{
     agent any
     tools{
-        maven 'mvn3.9.9'
+        maven 'Maven_3.9.11'
     }
         environment{
         DOCKER_IMAGE='simplybyte-calculator-jenkins-local'
@@ -13,7 +13,7 @@ pipeline{
     stages{
         stage('git clone'){
             steps{
-                git branch: 'main', credentialsId: 'github_simplybyte_credentials', url: 'https://github.com/simplybyte1266/simplybyte-springboot.git'
+                git branch: 'main', url: 'https://github.com/alsiddiq901/simplybyte-springboot.git'
             }
         }
         stage('print path'){
